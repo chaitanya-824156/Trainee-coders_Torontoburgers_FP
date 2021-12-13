@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../javascript/auth.js"></script>
+    <script src="../javascript/contact.js"></script>
+    <title>Toronto Burgers</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <!-- a section for the headings of the webpage and logo -->
+        <header>
+            <a href="../index.html"><img src="../images/logo_burgers.jpg" alt="Fitness Club Logo"></a>
+        </header>
+
+        <!-- navigation section of the webpage
+    use this area to add links to other pages-->
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../html/about.html">About Us</a></li>
+                <li><a href="../html/favourites.html">Favourites</a></li>
+                <li><a href="../html/cart.html">Cart</a></li>
+                <li><a href="../html/orders.html">Orders</a></li>
+                <li><a href="../html/contact.html">Contact Us</a></li>
+                <!-- <li id="authbtn" class="auth"><a href="./html/login.html">Login </a> / <a
+                        href="./html/signup.html">Register</a></li>
+                <li id="logoutbtn" onclick="logoutUser()" class="auth hidden"><a href="./index.html">Logout</a></li> -->
+            </ul>
+        </nav>
+
+        <!--  the main content of the web page-->
+        <main>
+            <h2>Contact us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="fName">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email">
+                <label for="phone">Phone:</label>
+                <input type="tel" name="phone" id="phone">
+
+                <label for="Feedback">Feedback</label>
+                <textarea name="Feedback" rows="3" cols="35"></textarea>
+
+                <input type="submit" id="submit" class="btn" value="Submit" onclick="">
+                <input type="reset" id="reset" class="btn" value="Reset">
+
+            </form>
+            <br/>
+            <p>We are located at: <br>
+                263 Toronto <br>
+               East Avenue
+            </p>
+            <br/>
+
+            <p> Phone Number </p>
+            <p> <a href="tel:647399373">(647)399373</a> </p>
+            <br/>
+
+            <p> Email Address </p>
+            <p> <a href="mailto:contact@torontoburgers.com">contact@torontoburgers.com</a> </p>
+        </main>
+
+        <footer>
+            <div id="copyright">
+                <p>
+                    &copy; Copyright 2021. All Rights Reserved. <br>
+                    <a href="mailto:contact@torontoburgers.com">contact@torontoburgers.com</a>
+                </p>
+            </div>
+            <div id="social">
+                <p>Connect with us in</p>
+                <p><a href=""><img src="../images/fblogo.png" alt="facebook logo"></a></p>
+                <p><a href=""><img src="../images/twitterlogo.png" alt="twitter logo"></a></p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
