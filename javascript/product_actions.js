@@ -95,3 +95,46 @@ function addCartProduct(cart) {
 	return
 }
 
+function updateCartItem(cart) {
+	if (refreshCurrentUser()) {
+		if (refreshUsers() && users[activeUser.username] && users[activeUser.username]['cart']) {
+			let id = cart.prodId
+			users[activeUser.username]['cart'][id] = cart
+			updateUsers(users)
+		}
+	}
+}
+
+function removeCart() {
+	if (refreshCurrentUser()) {
+		if (refreshUsers() && users[activeUser.username]) {
+			users[activeUser.username]['cart'] = {}
+			updateUsers(users)
+			return getCartProducts()
+		}
+	}
+}
+
+function getOrders() {
+	if (refreshCurrentUser()) {
+		if (refreshUsers() && users[activeUser.username] && users[activeUser.username]['orders']) {
+			return users[activeUser.username]['orders']
+		}
+	}
+	return {}
+}
+
+function addOrders(order) {
+	if (refreshCurrentUser()) {
+		if (refreshUsers() && users[activeUser.username]) {
+			let id = order.id
+			if (users[activeUser.username]['orders']) {
+				users[activeUser.username]['orders'][id] = order
+			} else {
+				users[activeUser.username]['orders'] = { [id]: order }
+			}
+			updateUsers(users)
+            removeCart()
+		}
+	}
+}

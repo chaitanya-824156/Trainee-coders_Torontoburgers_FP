@@ -1,0 +1,30 @@
+#orders {
+	margin: 30px 30px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	border: #000000 1px solid;
+}
+.desktop {
+	margin: 20px;
+}
+.order_prod {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-right: 15px;
+	padding-bottom: 5px;
+	border-bottom: #000000 1px solid;
+}
+.item {
+	margin: 5px 0;
+	margin-right: 10px;
+	border-radius: 10px;
+	border: #000000 1px solid;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+}
