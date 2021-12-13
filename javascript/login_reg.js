@@ -1,6 +1,18 @@
 const inusername = document.getElementById('username')
 const inpassword = document.getElementById('password')
 
+const initPage = () => {
+	const authBtn = document.getElementById('authbtn')
+	const logoutBtn = document.getElementById('logoutbtn')
+	if (refreshCurrentUser()) {
+		authBtn.style.display = 'none'
+	} else {
+		logoutBtn.style.display = 'none'
+	}
+}
+
+authCheck()
+initPage()
 
 isLoggedIn()
 
@@ -32,7 +44,7 @@ function signUpUser() {
 			address: inaddress.value.trim()
 		}
 		if (registerUser(inusername.value.trim(), inpassword.value.trim(), profile)) {
-			window.location.replace(index.html)
+			isLoggedIn()
 		}
 	}
 }

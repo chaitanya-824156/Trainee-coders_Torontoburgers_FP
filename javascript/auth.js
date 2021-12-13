@@ -40,7 +40,8 @@ let registerUser = (username, password, profile) => {
 	localStorage.setItem(AUTH, JSON.stringify(auth))
 
 	if (refreshUsers()) {
-		users[username]['profile'] = profile
+		if (users[username]) users[username]['profile'] = profile
+		else users[username] = { profile: profile }
 	} else {
 		users = {}
 		users[username] = { profile: profile }
