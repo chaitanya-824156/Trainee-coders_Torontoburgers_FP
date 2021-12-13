@@ -1,0 +1,570 @@
+/* styles for the Mobile-First Strategy */
+
+/* styles for body element */
+body {
+	background-color: #1d1d1c;
+	color: #8d8d8d;
+	margin: 0;
+}
+
+/* styles for fluid image */
+img {
+	max-width: 100%;
+}
+
+/* styles for teh container id */
+#container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* styles for the header section */
+header {
+	text-align: center;
+}
+
+/* styles for the nav element */
+nav {
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 1.25em;
+	font-weight: bold;
+	text-align: center;
+	margin-top: -1.5em;
+}
+
+/* add styles for the unordered list in teh nav */
+nav ul {
+	padding: 0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+/* add style for the list items in the nav */
+nav li {
+	background-color: #9d9d93;
+	border-radius: 2em;
+	list-style-type: none;
+	margin: 0.3em;
+	padding: 0.4em;
+}
+
+/* add styles fro teh anchor tag inside the li */
+nav li a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* add styles for teh mobile class */
+
+/* add style fro the desktop class */
+
+/* styles for the main div */
+main {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 1em;
+	margin-top: 0.5em;
+	padding: 1em;
+	border-radius: 2em 0 2em 0;
+	/* background-color: #ffffff; */
+	opacity: 0.85;
+}
+/* footer styles */
+footer {
+	font-size: 0.7em;
+	text-align: center;
+	margin-top: 2em;
+	color: #ffffff;
+}
+
+/* styles for anchor tag in main element */
+main a {
+	border-radius: 1em;
+	padding: 0.5em;
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* styles for anchor tag in footer */
+footer a {
+	color: #ffffff;
+	text-decoration: none;
+}
+/* styles for teh tablet class */
+.tablet {
+	display: none;
+}
+
+/* styles for teh equip class */
+.equip {
+	display: none;
+}
+
+/* styles for the input, textarea, select */
+input,
+textarea,
+select {
+	display: block;
+	margin-bottom: 1em;
+}
+
+/* styles for the label */
+label {
+	display: block;
+}
+
+/* styles for the ul in the form */
+form ul {
+	list-style-type: none;
+}
+
+/* styles for the chkbx class */
+.chkbx {
+	display: inline-block;
+}
+
+/* styles for the copyright div */
+#copyright {
+	float: left;
+	margin-top: 2em;
+	width: 80%;
+}
+
+/* styles for the social div */
+#social {
+	float: right;
+	width: 20%;
+}
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* transition: all 0.5s ease; */
+}
+
+.products {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	min-height: 300px;
+	align-items: center;
+	justify-content: space-evenly;
+	border-radius: 10px;
+	border: #000000 1px solid;
+}
+.products .item {
+	width: 25%;
+	margin: 8px 4px;
+	padding: 4px;
+	font-size: 18px;
+	font-size: 1.2vw;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: flex-start;
+	color: rgb(143, 143, 143);
+
+	border-radius: 13px;
+	overflow: hidden;
+
+	border: #000000 1px solid;
+}
+
+.item .prod_title {
+	font-size: 16px;
+	/* font-size: 1.3vw; */
+	font-weight: bold;
+	padding: 5px 2px;
+	text-overflow: ellipsis;
+}
+.title_color {
+	color: #8d8d8d;
+	/* font-size: 16px; */
+}
+
+.item .prod_desc {
+	padding: 2px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.item .prod_cal {
+	padding: 2px;
+}
+
+.qty {
+	font-size: 16px;
+	text-overflow: unset;
+}
+
+.total_price {
+	font-size: 12px;
+	text-overflow: unset;
+}
+
+.item .prod_action {
+	width: 100%;
+	margin: 0;
+	margin-top: 8px;
+	padding: 5px;
+	padding-top: 8px;
+	display: flex;
+	flex-direction: row;
+	border-top: #000000 1px solid;
+}
+
+.prod_action .button {
+	width: 50%;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.button {
+	padding: 10px;
+}
+
+.selected {
+	color: red;
+}
+
+#carddetails {
+	font-size: medium;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+#carddetails p {
+	margin-left: 0;
+	padding: 0%;
+}
+
+/* Media Query for teh tablet view port targets screen only */
+/* minimum width is 481px */
+@media only screen and (min-width: 100px) and (max-width: 450px) {
+	.products .item {
+		width: 75%;
+	}
+}
+@media only screen and (min-width: 450px) and (max-width: 600px) {
+	.products .item {
+		width: 45%;
+	}
+}
+@media only screen and (min-width: 685px) {
+	/* styles specifies teh horizontal display for the nav li */
+	.products .item {
+		width: 25%;
+	}
+
+	nav li {
+		display: inline;
+		float: left;
+		margin-left: 1%;
+		margin-right: 1%;
+		padding-left: 0;
+		padding-right: 0;
+		width: 18%;
+		white-space: nowrap;
+		border-radius: 0;
+		background-color: transparent;
+	}
+
+	/* styles for the main */
+	main {
+		margin: 10px 20px;
+		clear: left;
+		/* margin-top: 4em; */
+		border-radius: 0;
+		overflow: auto;
+	}
+
+	/* styles for h1 */
+	h1 {
+		text-align: center;
+	}
+
+	/* styles for images in figure */
+	figure img {
+		background-color: #1d1d1c;
+		display: block;
+		width: 100%;
+		height: 60%;
+		object-fit: cover;
+		padding-bottom: 0%;
+	}
+
+	/* styles for the anchor tag in the figure */
+	figure a {
+		padding: 0;
+		background-color: transparent;
+		text-decoration: none;
+	}
+
+	/* styles for the mobiole class */
+
+	.desktop {
+		display: inline;
+	}
+
+	/* styles for the eqiup class */
+	.equip {
+		display: inline;
+		float: left;
+		margin-right: 1.5em;
+	}
+
+	/* styles for teh class items */
+	.items {
+		display: block;
+		list-style-position: inside;
+	}
+
+	/* styles fro the section */
+	section {
+		padding-bottom: 3em;
+	}
+
+	/* styles for teh h1 in teh section */
+	section h1 {
+		text-align: left;
+	}
+
+	/* styles for teh anchor tag inside section */
+	section a {
+		background-color: transparent;
+		color: #1d1d1c;
+		font-weight: normal;
+		padding: 0;
+		text-decoration: underline;
+	}
+
+	/* styles for the dt */
+	dt {
+		font-weight: bold;
+		margin-top: 0.7em;
+	}
+
+	/* styles for teh contact class */
+	.contact {
+		background-color: transparent;
+		padding: 0;
+		color: #1d1d1c;
+		text-decoration: underline;
+	}
+
+	/* styles for the flex-container class */
+	.flex-container {
+		display: flex;
+	}
+
+	/* styles for the label */
+	label {
+		float: left;
+		padding-right: 0.5em;
+		width: 10em;
+		text-align: right;
+	}
+
+	/* styles for the btn class */
+	.btn {
+		margin-left: 12em;
+	}
+}
+
+/* Media query for desktop width size */
+@media only screen and (min-width: 860px) {
+	/* styles for teh container div */
+
+	.products .item {
+		width: 28%;
+	}
+	#container {
+		background-color: #1d1d1c;
+	}
+
+	/* styles for ul in nav */
+	nav ul {
+		margin: 0;
+		padding-left: 0.5%;
+		padding-right: 0.5%;
+	}
+
+	/* styles for teh li in nav */
+	nav li {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0;
+		width: 20%;
+	}
+
+	/* styles for the links in the nav */
+	nav li a {
+		display: inline-block;
+		padding: 0.7em;
+		text-shadow: 0.2em 0.1em #3d3d35;
+	}
+
+	/* styles for teh main element */
+	main {
+		background-color: #1d1d1c;
+	}
+
+	/* styles for the paragraphs inside main element */
+	main p {
+		color: #ffffff;
+		/* margin-left: auto;
+		margin-right: auto; */
+		width: 90%;
+	}
+
+	/* styles for teh item class */
+	.items {
+		margin-bottom: 7em;
+	}
+
+	/* styles for h1 in main */
+	/* main h1 {
+      clear: left;
+    } */
+
+	/* adding pseudo class for the links */
+	nav li a:hover {
+		color: #9d9d93;
+		font-style: italic;
+	}
+
+	nav li a:link {
+		color: #ffffff;
+	}
+
+	nav li a:visited {
+		color: #ccccff;
+	}
+
+	/* styles for the gradients */
+	body {
+		/* background-color: #ffffff; */
+	}
+
+	/* styles for header */
+	header {
+		text-align: left;
+	}
+
+	/* styles for teh nav */
+	nav {
+		float: right;
+		margin-right: 3em;
+		margin-bottom: 0;
+		width: 75%;
+		margin-top: -6em;
+	}
+
+	/* styles for images inside figure element */
+	figure img {
+		height: 15em;
+		opacity: 0.7;
+	}
+
+	/* styles removing transparency */
+	figure img:hover {
+		opacity: 1;
+	}
+
+	/* styles for h1  */
+	h1 {
+		color: #ffffff;
+	}
+
+	/* styles for the footer */
+	footer {
+		background-color: #2a2a2a;
+		margin-top: -0.2em;
+		padding: 2em;
+		overflow: auto;
+	}
+
+	/* styles for section */
+	section {
+		color: #ffffff;
+		margin-left: 1em;
+		padding-bottom: 5em;
+	}
+
+	/* styles for teh anchor tag inside section */
+	section a {
+		color: #ffffff;
+	}
+
+	/* styles for tha paragraphs in section */
+	section p {
+		margin-left: 0;
+	}
+
+	/* styles for the main heading h2 */
+	main h2 {
+		color: #ffffff;
+	}
+
+	/* styles for the contact */
+	.contact {
+		color: #ffffff;
+	}
+
+	/* styles for the h2 in article main */
+
+	/* styles for the form element */
+	form {
+		background-color: #ffffff;
+		padding: 1em;
+	}
+
+	/* styles for paragraphs in form */
+	form p {
+		color: #000000;
+		margin-left: inherit;
+	}
+
+	/* styles for the video */
+	.video {
+		padding: 1em;
+		text-align: center;
+		display: block;
+	}
+
+	/* styles for the video tag */
+	video {
+		border: 0.5em ridge #ffffff;
+		height: auto;
+		max-width: 100%;
+	}
+}
+
+.btn,
+.button {
+	background-color: rgb(21, 76, 102);
+	padding: 4px;
+	margin: 2px 1px;
+	border: none;
+	width: 50%;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 17px;
+}
+
+.btn:hover,
+.button:hover {
+	background-color: #61b1f1;
+}

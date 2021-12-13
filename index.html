@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./javascript/auth.js"></script>
+    <script src="./data.js" defer></script>
+    <script src="./javascript/product_actions.js" defer></script>
+    <script src="./javascript/index.js" defer></script>
+    <title>Toronto Burgers</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <!-- a section for the headings of the webpage and logo -->
+        <header>
+            <a href="index.html"><img src="./images/logo_burgers.jpg" alt="Toronto Burgers"></a>
+        </header>
+
+        <!-- navigation section of the webpage
+          use this area to add links to other pages-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./html/about.html">About Us</a></li>
+                <li><a href="./html/favourites.html">Favourites</a></li>
+                <li><a href="./html/cart.html">Cart</a></li>
+                <li><a href="./html/orders.html">Orders</a></li>
+                <li><a href="./html/contact.html">Contact Us</a></li>
+                <li id="authbtn" class="auth"><a href="./html/login.html">Login </a> / <a
+                        href="./html/signup.html">Register</a></li>
+                <li id="logoutbtn" onclick="logoutUser()" class="auth hidden"><a href="./index.html">Logout</a></li>
+            </ul>
+        </nav>
+
+        <!--  the main content of the web page-->
+        <main>
+
+            <p>
+                Welcome to Toronto Burgers.
+            </p>
+            <h2>Order Now!</h2>
+
+            <div class="desktop">
+
+                <div id="products" class="products">
+
+                    <div class="item">
+                        <figure>
+                            <img src="./images/group.jpg" alt="group class">
+                        </figure>
+                        <div class="prod_title title_color">
+                            Bacon Delux
+                        </div>
+                        <div class="prod_desc">
+                            description fdfdfsfdsf f df s fs df sdf sd fs f s fs f
+                        </div>
+                        <div class="prod_cal">
+                            cal : 4545.545
+                        </div>
+
+                        <div class="prod_desc">
+                            Category : Combos
+                        </div>
+                        <div class="prod_cal">
+                            Price : 4545.545
+                        </div>
+                        <div class="prod_action">
+                            <i class="button fa fa-heart selected"></i>
+                            <i class="button fa fa-plus"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- footer section for the copyright and links to social medias -->
+        <footer>
+            <div id="copyright">
+                <p>
+                    <!-- &#169; copyright symbol html entity number -->
+                    &copy; Copyright 2021. All Rights Reserved. <br>
+                    <a href="mailto:contact@torontoburgers.com">contact@torontoburgers.com</a>
+                </p>
+            </div>
+            <div id="social">
+                <p>Connect with us in</p>
+                <p><a href=""><img src="./images/fblogo.png" alt="facebook logo"></a></p>
+                <p><a href=""><img src="./images/twitterlogo.png" alt="twitter logo"></a></p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
