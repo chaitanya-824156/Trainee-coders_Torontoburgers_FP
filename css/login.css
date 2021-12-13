@@ -1,0 +1,22 @@
+form label {
+	display: inline-block;
+	width: 100px;
+}
+form div {
+	margin-bottom: 10px;
+}
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#login {
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 5px;
+	margin: auto;
+	color: #000;
+}
